@@ -1,8 +1,9 @@
 require "resque"
 require "scss_lint"
 
-require "jobs/completed_file_review_job"
+require "sentry"
 require "config_options"
+require "jobs/completed_file_review_job"
 
 class ScssReviewJob
   @queue = :scss_review
@@ -37,5 +38,8 @@ class ScssReviewJob
       patch: attributes.fetch("patch"),
       violations: violations
     )
+  rescue => exception
+    Raven.capture_exception(exception)
+    raise
   end
 end

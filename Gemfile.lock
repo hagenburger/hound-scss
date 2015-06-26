@@ -7,8 +7,12 @@ GEM
     columnize (0.9.0)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    hashie (3.2.0)
     mono_logger (1.1.0)
     multi_json (1.11.0)
+    multipart-post (2.0.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -40,11 +44,16 @@ GEM
     scss-lint (0.34.0)
       rainbow (~> 2.0)
       sass (~> 3.4.1)
+    sentry-raven (0.9.4)
+      faraday (>= 0.7.6)
+      hashie (>= 1.1.0)
+      uuidtools
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
+    uuidtools (2.1.5)
     vegas (0.1.11)
       rack (>= 1.0.0)
 
@@ -57,4 +66,5 @@ DEPENDENCIES
   resque
   rspec
   scss-lint (= 0.34.0)
+  sentry-raven
   sinatra
