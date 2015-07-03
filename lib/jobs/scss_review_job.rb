@@ -1,7 +1,7 @@
 require "resque"
 require "scss_lint"
 
-require "sentry"
+require "config/sentry"
 require "config_options"
 require "jobs/completed_file_review_job"
 
