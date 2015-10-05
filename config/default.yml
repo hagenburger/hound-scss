@@ -133,7 +133,7 @@ linters:
   VariableForProperty:
     enabled: false
     properties: []
-  VendorPrefixes:
+  VendorPrefix:
     enabled: true
     identifier_list: bourbon
     include: []
